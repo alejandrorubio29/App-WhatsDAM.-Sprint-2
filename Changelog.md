@@ -9,9 +9,26 @@
 - Funcionalidad D: implementación de cuadro de envío de mensajes y borrado al pulsar la flecha de envío
 
 ### Cambiado
-
+- Nada
 
 ### Eliminado
 
+- Nada
+
+## [Versió 2.0.0] - 11/11/2023
+
+### Añadido
+
+- Funcionalidad E: Implementación del RecyclerView asociado a la generación de mensajes
+- Funcionalidad F: Implementación del smooth scrolling cuando la cantidad de mensajes supera a la pantalla
+
+
+### Cambiado
+
+- Funcionalidad D: se añade el traspaso del texto de mensaje como elemento del RecyclerView. El usuario queda pendiente de realizar.
+
+### Eliminado
+
+- Nada
 
 
