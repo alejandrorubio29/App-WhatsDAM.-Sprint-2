@@ -1,4 +1,4 @@
-![imagen](https://github.com/alejandrorubio29/App-WhatsDAM.-Sprint-2/assets/145864071/497cb866-9e7b-4f6f-a473-2d041b7343a2)# App-WhatsDAM.-Sprint-2
+# WhatsDAM Sprint 2 - RecyclerView
 
 En aquest sprint l'aplicació implementa un RecyclerView en forma de missatges a la dreta a mesura que premem el botó de la fletxa. 
 
