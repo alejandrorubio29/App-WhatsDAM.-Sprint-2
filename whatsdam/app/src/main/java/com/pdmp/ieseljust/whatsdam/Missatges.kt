@@ -14,6 +14,7 @@ object Missatges {
 
         missatges.add(missatge)
 
+
         return true
 
     }

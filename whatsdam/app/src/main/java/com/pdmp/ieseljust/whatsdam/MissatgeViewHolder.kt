@@ -13,8 +13,8 @@ class MissatgeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
     //Instancia als components de les vistes (subvistes)
 
-    val msgtext = itemView.findViewById(R.id.msg_text) as TextView
-    val msgtimestamp = itemView.findViewById(R.id.msg_me_timestamp) as TextView
+    private val msgtext = itemView.findViewById(R.id.msg_text) as TextView
+    private val msgtimestamp = itemView.findViewById(R.id.msg_me_timestamp) as TextView
 
 
     //Enllaç text/hora amb component vista

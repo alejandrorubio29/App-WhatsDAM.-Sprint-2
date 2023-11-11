@@ -48,6 +48,7 @@ class MessagesWindow : AppCompatActivity() {
             val missatge : String = binding.MessageText.text.toString()
 
             //Obtenció del usuari
+                //TODO
 
             //Afegim a la llista. Nickname text será no null perque ve del no null de la MainActivity
             Missatges.add(nickNameText!!,missatge) //A adaptar amb el altre usuari
@@ -56,7 +57,11 @@ class MessagesWindow : AppCompatActivity() {
 
             binding.MissatgesRecyclerView.adapter?.notifyItemInserted(Missatges.missatges.size - 1)
 
-            println(missatge)
+            //Smooth scroll a l'ultim element
+
+            val index = Missatges.missatges.size - 1  //el index será el ultim element (ojo es una llista, comença per 0)
+
+            binding.MissatgesRecyclerView.smoothScrollToPosition(index)
 
             //Netejem missatge
             binding.MessageText.text.clear()
