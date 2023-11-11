@@ -3,6 +3,7 @@ package com.pdmp.ieseljust.whatsdam
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.pdmp.ieseljust.whatsdam.databinding.ActivityMainBinding
 import com.pdmp.ieseljust.whatsdam.databinding.ActivityMessagesWindowBinding
 
@@ -26,9 +27,41 @@ class MessagesWindow : AppCompatActivity() {
         //Configuramos mensaje
         connectionInfoTextView.text = "Conectado a $serverAddressText como $nickNameText"
 
+    //Construcció RecyclerView
+        //Establim el LayoutManager per al RecycleView
+
+        binding.MissatgesRecyclerView.layoutManager= LinearLayoutManager(this)
+
+        //Indiquem grandària fixa
+        binding.MissatgesRecyclerView.setHasFixedSize(true)
+
+        //Afegim adaptador
+
+        binding.MissatgesRecyclerView.adapter = AdaptadorMissatges()
+
         //COnfiguramos el callback para borrar el texto al presionar enviar
+        //Adaptació: que no soles esborre sinò assigne el missatge
+
         binding.sendMessage.setOnClickListener{
+
+            //Obtencio del missatge del edittext. Ojo que el edittext retorna editable, no String
+            val missatge : String = binding.MessageText.text.toString()
+
+            //Obtenció del usuari
+
+            //Afegim a la llista. Nickname text será no null perque ve del no null de la MainActivity
+            Missatges.add(nickNameText!!,missatge) //A adaptar amb el altre usuari
+
+            //Avisem al adaptador
+
+            binding.MissatgesRecyclerView.adapter?.notifyItemInserted(Missatges.missatges.size - 1)
+
+            println(missatge)
+
+            //Netejem missatge
             binding.MessageText.text.clear()
+
+
 
         }
 

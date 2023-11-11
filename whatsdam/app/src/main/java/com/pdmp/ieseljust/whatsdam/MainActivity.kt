@@ -4,9 +4,9 @@ import android.content.Intent
 import android.util.Patterns
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.pdmp.ieseljust.whatsdam.databinding.ActivityMainBinding
-import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
 
